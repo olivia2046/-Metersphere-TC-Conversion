@@ -8,12 +8,13 @@ desc: 将metersphere标准格式的用例，按照指定模板的格式填入she
 如果不需要附带截图，则脚本可在本地执行
 1.Metersphere中按顺序（如用例ID）排列全部用例，全部导出，勾选全部基础字段、自定义字段，以及其他字段中的评论、创建人、创建时间（排序用）、更新时间等
 2.检查导出的Excel用例的顺序，如果和预期输出的用例顺序不一致，手动调整（也可在生成Excel后调整Excel文档中用例顺序）
-3.修改path （项目模板文件目录下需创建好用例模板文件，包含项目WORD版用例中的章节号和表格，表格内填入邮件合并域）
-4.修改src_wb_path
-5.修改actual_result_loc（实际结果在表格中的位置索引，如A7）
-6.设置need_image(若输出的用例不需要带截图，则设置为False)。需要输出截图时注意设置img_width和img_height
-7.修改image_dir(用例截图所在路径，服务器上为固定地址，仅调试脚本时需要修改)
-8.使用python3运行脚本(metersphere服务器上使用python3 XXXX.py)
+3.修改rootdir （脚本中使用当前文件路径，可修改为客户项目文件夹)，rootdir下创建好tmpl_wb_path指向的用例模板文件，参加Excel分sheet用例模板.xlsx
+4.设置src_wb_path
+5.设置tmpl_sheet_name和tmpl_sheet_name
+6.修改actual_result_loc（实际结果内容在表格中的位置索引，如A7）
+7.设置need_image(若输出的用例不需要带截图，则设置为False)。需要输出截图时注意设置img_width和img_height
+8.修改image_dir(用例截图所在路径，服务器上为固定地址，仅调试脚本时需要修改)
+9.使用python3运行脚本
 
 '''
 import os
@@ -35,10 +36,10 @@ img_width = 600
 img_height = 450
 
 src_wb_path = root_dir + os.sep + "Metersphere_case_dummy_case.xlsx"
-src_sheet_name = "模版"
+src_sheet_name = "模版" #指定源用例文件中的sheet名
 tmpl_wb_path = root_dir + os.sep + "Excel分sheet用例模板.xlsx"
-tmpl_sheet_name = "测试用例执行结果"#linux上识别中文有问题，改为读取英文表单名
-sheet_name_prefix="测试用例执行结果"
+tmpl_sheet_name = "测试用例执行结果" # 指定模版sheet名
+sheet_name_prefix="测试用例执行结果" # 指定生成的测试用例sheet名前缀
 #实际结果在模板中的位置
 actual_result_loc = 'A7'
 target_wb_path = root_dir + os.sep + "excel_multi_sheets_target.xlsx"
