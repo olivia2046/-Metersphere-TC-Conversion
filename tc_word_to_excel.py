@@ -2,7 +2,7 @@
 '''
 @author: olivia.dou
 Created on: 2023/6/24 8:34
-desc:
+desc: 将项目现有的Word格式的用例转成Metersphere的导入Excel格式
 使用步骤
 1. 将现有Word用例去除其他部分(如封面页、文档描述等)，仅保留用例章节，单独保存一份文档（docx格式）
 2. 修改tc_fields_loc中各字段对应值在Word用例表格中的位置(行,列),以0起始
@@ -34,7 +34,7 @@ current_file_path = os.path.abspath(__file__)
 root_dir = os.path.dirname(current_file_path)
 source_path = root_dir + os.sep + "existing_word_tc.docx"
 source_doc = Document(source_path)
-dest_wb_path = root_dir + os.sep +'dummy_output.xlsx' #目标用例workbook
+dest_wb_path = root_dir + os.sep +'word_tc_output.xlsx' #目标用例workbook
 dest_wb = openpyxl.Workbook()
 dest_wb.save(dest_wb_path) # 同名覆盖，否则创建
 #dest_sheet = dest_wb.create_sheet(dest_sheet_name)
