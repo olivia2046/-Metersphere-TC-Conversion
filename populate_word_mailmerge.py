@@ -31,7 +31,7 @@ from msphere_lib import get_parts_from_comment_field,get_tc_data
 path = "."
 template_path = path + os.sep + "Testcase_template.docx"
 template_doc = Document(template_path)
-src_wb_path = path + os.sep + "Metersphere_exported.xlsx"
+src_wb_path = path + os.sep + "Metersphere_case_dummy.xlsx"
 output_path = path + os.sep + "Word_tc_output.docx"
 #实际结果在模板中的位置
 actual_result_row_index = 6

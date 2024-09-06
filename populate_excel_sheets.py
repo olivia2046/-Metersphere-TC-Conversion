@@ -35,7 +35,7 @@ image_dir = r"/app/metersphere/data/image/markdown"
 img_width = 600
 img_height = 450
 
-src_wb_path = root_dir + os.sep + "Metersphere_case_dummy_case.xlsx"
+src_wb_path = root_dir + os.sep + "Metersphere_case_dummy.xlsx"
 src_sheet_name = "模版" #指定源用例文件中的sheet名
 tmpl_wb_path = root_dir + os.sep + "Excel分sheet用例模板.xlsx"
 tmpl_sheet_name = "测试用例执行结果" # 指定模版sheet名

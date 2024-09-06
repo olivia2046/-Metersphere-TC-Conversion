@@ -7,7 +7,6 @@
    交付用例为Excel列表格式的（即和Metersphere导出用例格式一样，在单个Sheet上以列表形式列出用例的），和原有Excel格式用例转换成Metersphere导入用例格式类似，调整列名、列序，或编写转换脚本（脚本不通用，此处忽略）  
    交付用例为Excel独立sheet格式的（即每个sheet一个单独的用例表格），参见下方"生成独立sheet用例"  
    交付用例为Word格式的，参加下方“生成Word格式用例”
-
    
 
 # Word用例转MS导入格式  
@@ -29,7 +28,7 @@
 6. 修改actual_result_loc（实际结果内容在表格中的位置索引，如A7）
 7. 设置need_image(若输出的用例不需要带截图，则设置为False)。需要输出截图时注意设置img_width和img_height
 8. 修改image_dir(用例截图所在路径，服务器上为固定地址，仅调试脚本时需要修改)
-9. 使用python3运行脚本  
+9. 运行脚本populate_excel_sheets.py  
 注意如果导出用例需要附带截图，则本脚本需在Metersphere所在服务器执行（否则找不到图片）；  
 如果不需要附带截图，则脚本可在本地执行
 
@@ -64,7 +63,6 @@
 修改脚本描述中列出的字段值，执行脚本  
 如果用例中需包含截图，脚本需在Metersphere服务器端执行脚本(/home/appadmin/QATest/metersphere)  
 
-6. 
 
 
 
