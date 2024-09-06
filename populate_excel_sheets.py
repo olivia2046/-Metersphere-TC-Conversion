@@ -41,7 +41,7 @@ tmpl_sheet_name = "测试用例执行结果"#linux上识别中文有问题，改
 sheet_name_prefix="测试用例执行结果"
 #实际结果在模板中的位置
 actual_result_loc = 'A7'
-target_wb_path = root_dir + os.sep + "dummy_target.xlsx"
+target_wb_path = root_dir + os.sep + "excel_multi_sheets_target.xlsx"
 # 因需要带格式复制sheet， 且copy_worksheet只能在同一个workbook内复制sheet，因此先复制模板文件到目标文件，再在目标文件内操作
 try:
     copyfile(tmpl_wb_path, target_wb_path)
