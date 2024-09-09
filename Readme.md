@@ -1,9 +1,11 @@
 # 概述  
 团队使用Metersphere管理用例有以下困难：  
 1. 现有用例需要导入Metersphere。现有用例包括Excel格式和Word格式。  
+   解决方案：  
    Excel格式用例转换成Metersphere导入格式(Excel)较为简单，有时仅涉及列的映射，调整列名即可。较为复杂的情况可写脚本转换，由于转换脚本不通用，不放在当前Repository里；    
    Word格式用例转换成Metersphere导入格式，需识别Word用例中各字段，参见下方“Word用例转MS导入格式”
 2. 用例导出为固定格式，但是客户项目的用例根据客户需求有不同格式，需要做转换：  
+   解决方案：  
    交付用例为Excel列表格式的（即和Metersphere导出用例格式一样，在单个Sheet上以列表形式列出用例的），和原有Excel格式用例转换成Metersphere导入用例格式类似，调整列名、列序，或编写转换脚本（脚本不通用，此处忽略）  
    交付用例为Excel独立sheet格式的（即每个sheet一个单独的用例表格），参见下方"生成独立sheet用例"  
    交付用例为Word格式的，参加下方“生成Word格式用例”
